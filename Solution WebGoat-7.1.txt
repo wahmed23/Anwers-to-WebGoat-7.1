@@ -15,4 +15,17 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
       Log in as "Larry Stooge" with password "larry"
       Using ZAP, change the "employee_ID" to "105" as this is the ID of "Tom Cat"
       change the "action" parameter to "DeleteProfile". This will delete Tom Cat's profile.
-2. 
+
+2. Ajax security:
+   2.1 DOM Injection
+   A.  Write anything in the box in front of "License Key"
+       When you intercept the traffic from server replace the body with "document.form.SUBMIT.disabled=false". You may to have to do this on all the replies that you intercept from the server
+   2.2 DOM-Based cross-site scripting
+   A.  Stage1: <img src="images/logos/owasp.jpg"/>
+       Stage2: <img src=x onerror=;;alert('XSS')/>
+       Stage3: <iframe src="javascript:alert('XSS');"/>
+       Stage4: Enter the html script showed
+       Stage5: ONly available for developer version
+   2.3 XML Injection
+   A.  Intercept the traffic towards the server and change the parameters:
+      "check1001" to "check1004" or "check1005"
