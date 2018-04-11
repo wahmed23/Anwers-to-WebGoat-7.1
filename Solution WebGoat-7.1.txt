@@ -1,1 +1,12 @@
 Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured to send traffic via ZAP.
+
+
+1. Access Control Flaws:
+  1.1 Using an Access Control Matrix:
+  A.   Set break point on your ZAP for all traffic by clicking the green round button
+       Check access through user "Shemp" and you are done
+
+  1.2 Bypass a Path based access Control Scheme
+  A.  Set break point on ZAP.
+      Change the variable "File" in your request that is sent to the server to "../../../../../WEB-INF/spring-security.xml"
+  
