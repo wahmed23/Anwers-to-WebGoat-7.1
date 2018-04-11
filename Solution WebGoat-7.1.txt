@@ -9,4 +9,10 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
   1.2 Bypass a Path based access Control Scheme
   A.  Set break point on ZAP.
       Change the variable "File" in your request that is sent to the server to "../../../../../WEB-INF/spring-security.xml"
-  
+
+  1.3 Bypass Business layer access Control
+  A.  For starters, the password for user "Tom Cat" would be "tom"
+      Log in as "Larry Stooge" with password "larry"
+      Using ZAP, change the "employee_ID" to "105" as this is the ID of "Tom Cat"
+      change the "action" parameter to "DeleteProfile". This will delete Tom Cat's profile.
+2. 
