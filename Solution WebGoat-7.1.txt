@@ -32,4 +32,6 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
    2.4 JSON Injection
    A.  Select the flight with 0 stops. Intercept the traffic going towards server and change the "price2Submit" to "$300".
    2.5 Silent Transactions Attacks
-   A.
+   A.  Write "javascript:submitData(1234566,11000)". However this will not totally work. Modern browsers do not let you execute javascript from address bar.
+   2.6 Insecure Client Storage
+   A.  Find the javascript code in the html that is responsible for the coupon code. Function decrypt(code) is the code you should be looking at.
