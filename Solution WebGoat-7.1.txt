@@ -25,7 +25,11 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
        Stage2: <img src=x onerror=;;alert('XSS')/>
        Stage3: <iframe src="javascript:alert('XSS');"/>
        Stage4: Enter the html script showed
-       Stage5: ONly available for developer version
+       Stage5: Only available for developer version
    2.3 XML Injection
    A.  Intercept the traffic towards the server and change the parameters:
-      "check1001" to "check1004" or "check1005"
+       "check1001" to "check1004" or "check1005"
+   2.4 JSON Injection
+   A.  Select the flight with 0 stops. Intercept the traffic going towards server and change the "price2Submit" to "$300".
+   2.5 Silent Transactions Attacks
+   A.
