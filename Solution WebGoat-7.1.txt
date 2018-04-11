@@ -1,0 +1,1 @@
+Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured to send traffic via ZAP.
