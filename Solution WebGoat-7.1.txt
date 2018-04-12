@@ -8,18 +8,22 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
 
   1.2 Bypass a Path based access Control Scheme
   A.  Set break point on ZAP.
-      Change the variable "File" in your request that is sent to the server to "../../../../../WEB-INF/spring-security.xml"
+      Change the variable "File" in your request that is sent to the server to
+      "../../../../../WEB-INF/spring-security.xml"
 
   1.3 Bypass Business layer access Control
   A.  For starters, the password for user "Tom Cat" would be "tom"
       Log in as "Larry Stooge" with password "larry"
       Using ZAP, change the "employee_ID" to "105" as this is the ID of "Tom Cat"
-      change the "action" parameter to "DeleteProfile". This will delete Tom Cat's profile.
+      Change the "action" parameter to "DeleteProfile". This will delete Tom Cat's
+      profile.
 
 2. Ajax security:
    2.1 DOM Injection
    A.  Write anything in the box in front of "License Key"
-       When you intercept the traffic from server replace the body with "document.form.SUBMIT.disabled=false". You may to have to do this on all the replies that you intercept from the server
+       When you intercept the traffic from server replace the body with
+       "document.form.SUBMIT.disabled=false".
+       You may to have to do this on all the replies that you intercept from the server
    2.2 DOM-Based cross-site scripting
    A.  Stage1: <img src="images/logos/owasp.jpg"/>
        Stage2: <img src=x onerror=;;alert('XSS')/>
@@ -30,8 +34,14 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
    A.  Intercept the traffic towards the server and change the parameters:
        "check1001" to "check1004" or "check1005"
    2.4 JSON Injection
-   A.  Select the flight with 0 stops. Intercept the traffic going towards server and change the "price2Submit" to "$300".
+   A.  Select the flight with 0 stops.
+       Intercept the traffic going towards server and
+       change the "price2Submit" to "$300".
    2.5 Silent Transactions Attacks
-   A.  Write "javascript:submitData(1234566,11000)". However this will not totally work. Modern browsers do not let you execute javascript from address bar.
+   A.  Write "javascript:submitData(1234566,11000)".
+       However this will not totally work. Modern browsers do not let you
+       execute javascript from address bar. But you still will get the green check
+       mark for completion.
    2.6 Insecure Client Storage
-   A.  Find the javascript code in the html that is responsible for the coupon code. Function decrypt(code) is the code you should be looking at.
+   A.  Find the javascript code in the html that is responsible for the coupon code.
+       Function decrypt(code) is the code you should be looking at.
