@@ -44,4 +44,16 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
        mark for completion.
    2.6 Insecure Client Storage
    A.  Find the javascript code in the html that is responsible for the coupon code.
-       Function decrypt(code) is the code you should be looking at.
+       Function decrypt(code) is the code you should be looking at. This will be tricky
+       in Firefox browser, so yo may need Chrome or better go for Edge.
+       In MS Edge, just "inspect" the box for coupon code. and then in "debugger" tab
+       search for "isValidCode" and put the break on line with variable "decrypted".
+       Write anything in the box for coupon and once the breakpoint is hit, hove mouse
+       over "decrypted" and you will get your answer.
+       The point here is that the Javascript "clientSideValidation.js" is sent over as
+       a variable/string to an eval() function. That is why you will not be able to see
+       it in the normal rendered javascripts.
+       You can still find the code in Chrome by going to the console and type
+       "isValidCoupon". You can see three dots in the end of the code, click them and
+       voila, you can see the code. Put the break point and carry on as described above.
+       I am not able to figure out a way to debug the code in Firefox. 
