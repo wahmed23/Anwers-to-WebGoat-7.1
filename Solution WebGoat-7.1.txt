@@ -56,4 +56,9 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
        You can still find the code in Chrome by going to the console and type
        "isValidCoupon". You can see three dots in the end of the code, click them and
        voila, you can see the code. Put the break point and carry on as described above.
-       I am not able to figure out a way to debug the code in Firefox. 
+       There is an extremely simple way in Firefox to this problem. Look at the code by
+       copying the full address from the rendered HTML code and you would figure out
+       that the variable "decrypted". If you just write the variable in the console,
+       it will show the value that is the answer. In my case it is "PRESSTWO".
+       Next step requires you to make the order free. The way I did it, was to Intercept
+       the traffic with ZAP, change the value to 0.00 of variable "f.FRANDTOT.value".
