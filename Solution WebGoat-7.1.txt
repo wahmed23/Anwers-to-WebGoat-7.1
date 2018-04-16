@@ -45,7 +45,7 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
    2.6 Insecure Client Storage
    A.  Find the javascript code in the html that is responsible for the coupon code.
        Function decrypt(code) is the code you should be looking at. This will be tricky
-       in Firefox browser, so yo may need Chrome or better go for Edge.
+       in Firefox browser, so you may need Chrome or better go for Edge.
        In MS Edge, just "inspect" the box for coupon code. and then in "debugger" tab
        search for "isValidCode" and put the break on line with variable "decrypted".
        Write anything in the box for coupon and once the breakpoint is hit, hove mouse
@@ -62,3 +62,18 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
        it will show the value that is the answer. In my case it is "PRESSTWO".
        Next step requires you to make the order free. The way I did it, was to Intercept
        the traffic with ZAP, change the value to 0.00 of variable "f.FRANDTOT.value".
+   2.7 Same Origin Policy Protection
+   A.  Just copy paste the two URLs that are given on the page. URL starting with "/WebGoat"
+       will return a valid response and will be displayed in the "Response" box.
+
+3. Authentication Flaws:
+   3.1 Password Strength
+   A.  Just check the time to crack for the passwords in the list. Mind that answers you
+       will get will be different from the real answers (probably due to increase in CPU
+       power overtime).
+   3.2 Forgot password
+   A.  The account you should recover the password from is "admin" and fav color is "green"
+   3.3 Multi Level Login 1
+   A.  Just input the username, password and first TAN. You can see in the intercepted
+       traffic that TAN number is also sent. This is the weakness. In the second stage,
+       change the TAN value to 1 and enter 1st TAN. 
