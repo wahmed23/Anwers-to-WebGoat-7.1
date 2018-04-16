@@ -92,4 +92,10 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
    "adminpw" in the html.
 
 6. Concurrency
-   6.1 
+   6.1 Enter "jeff" and "dave" in the same box by opening this page in two separate browsers
+       keep clicking fast and you will see that both windows may display same information.
+   6.2 This is more like a fast clicking exercise. Open up the same page in two browsers.
+       In browser A, select a cheap item and in browser B select an expensive one. Update
+       the orders. Then purchase the order in cheaper one and confirm the order in the
+       expensive one. Do it multiple times and you may get lucky to exploit the
+       concurrency vulnerability.
