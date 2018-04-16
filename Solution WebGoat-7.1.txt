@@ -76,4 +76,20 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
    3.3 Multi Level Login 1
    A.  Just input the username, password and first TAN. You can see in the intercepted
        traffic that TAN number is also sent. This is the weakness. In the second stage,
-       change the TAN value to 1 and enter 1st TAN. 
+       change the TAN value to 1 and enter 1st TAN.
+   3.4 Multi Level Login 2
+   A.  Enter Joe's username and password. On the next page, enter Joe's TAN and intercept
+       the traffic. IN the parameters change the name from Joe to Jane. You are done.
+
+4. Buffer Overflows:
+   4.1 Here, you need to overflow the buffer for room number. Buffers (if vulnerable) can
+   be overflowed by 1024, 2048 or 4096 characters. Then check the hidden fields in the last
+   page and you will find a list of people. Enter "Jonathan Ravern 4321" by restarting the
+   lesson and this is the answer.
+
+5. Code Quality:
+   5.1 Just inspect the username element and you can see the username "admin" and password
+   "adminpw" in the html.
+
+6. Concurrency
+   6.1 
