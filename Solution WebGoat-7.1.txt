@@ -125,4 +125,19 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
    7.2 Stored XSS Attacks:
    A.  Enter "<script>alert('XSSTitle');</script>" in the title bar and "<script>alert('XSSBody');</script>"
        in the message body. You will see the title bar pops up.
-   7.3 
+   7.2.1 Stage 1
+   A.    Log in as Tom and search for Jerry, put "<script>alert('XSS');</script>"
+         in the street field.
+   7.2.2 Stage 3
+   A.    Log in as "David"(password = 'david') and visit Bruce profile. XSS
+         should pop up.
+   7.2.3 Stage 5 (Reflected XSS)
+   A.    Enter "<script>alert('XSS');</script>" in the search bar
+   7.3 Reflected XSS
+   A.  Enter "<script>alert('XSS');</script>" in the all input fields. Last
+       one pops up.
+   7.4 CSRF
+   A.  Insert any text in the Title and "Enter "<img src=attack?Screen99229&menu=900&transferFunds=500>"
+       in the search bar" in the message.
+   7.5 CSRF Prompt By-Pass
+   A.  
