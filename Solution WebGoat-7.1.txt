@@ -137,7 +137,7 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
    A.  Enter "<script>alert('XSS');</script>" in the all input fields. Last
        one pops up.
    7.4 CSRF
-   A.  Insert any text in the Title and "Enter "<img src=attack?Screen99229&menu=900&transferFunds=500>"
+   A.  Insert any text in the Title and Enter "<img src=http://XXX.XXX.XXX.XXX:8080/WebGoat/attack?Screen99229&menu=900&transferFunds=500>"
        in the search bar" in the message.
    7.5 CSRF Prompt By-Pass
    A.  
