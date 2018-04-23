@@ -144,6 +144,17 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
        and "<img src=http://XXX.XXX.XXX.XXX:8080/WebGoat/attack?Screen={insert the screen value}&menu={Insert menu value}&transferFunds=CONFIRM/>"
        in the search bar" in the message.
    7.6 CSRF Token By-Pass
-   A.  
+   A.
    7.7 HTTPOnly Test
    A.  Click "Read Cookie" and "Write Cookie" button for both "Yes" and "No" options.
+
+8. Improper Error Handling
+   8.1 Fail Open Authentication Scheme
+   A.  Enter "Admin" user name and anything in the password, then press submit.
+       Intercept the message and delete the password value from parameters.
+       You will be logged in.
+
+9. Injection Flaws
+   9.1 Command Injection
+   A.  Select any lesson plan and intercept the traffic. Change the parameters
+       by overwriting the "HelpFile" value with ""; ls;#".
