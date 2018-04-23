@@ -143,3 +143,7 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
    A.  Insert any text in the Title and Enter "<img src=http://XXX.XXX.XXX.XXX:8080/WebGoat/attack?Screen={insert the screen value}&menu={Insert menu value}&transferFunds=50000/>"
        and "<img src=http://XXX.XXX.XXX.XXX:8080/WebGoat/attack?Screen={insert the screen value}&menu={Insert menu value}&transferFunds=CONFIRM/>"
        in the search bar" in the message.
+   7.6 CSRF Token By-Pass
+   A.  
+   7.7 HTTPOnly Test
+   A.  Click "Read Cookie" and "Write Cookie" button for both "Yes" and "No" options.
