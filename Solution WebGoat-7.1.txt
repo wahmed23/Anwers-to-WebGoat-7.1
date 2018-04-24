@@ -164,4 +164,10 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
    9.3 Log Spoofing
    A.  Insert carriage return and write on the new line by:
        Waqar%0d%0aLogin Successful for user: Admin
-   9.4 
+   9.4 XPATH Injection
+   A.  This is very similar to SQL injection. Entering the following will complete
+       the lesson: "Mike' or 1=1 or 'a'='a". Make sure there is no closing coma
+       after the second "a". The reason that there are two ORs in this injection
+       is because the XPATH interprets it as:
+       expression="/employees/employee[(loginID/text()='Smith' or 1=1) OR ('a'='a' and passwd/text()='password')]"
+   9.5 
