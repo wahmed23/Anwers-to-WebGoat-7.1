@@ -170,4 +170,7 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
        after the second "a". The reason that there are two ORs in this injection
        is because the XPATH interprets it as:
        expression="/employees/employee[(loginID/text()='Smith' or 1=1) OR ('a'='a' and passwd/text()='password')]"
-   9.5 
+   9.5 String SQL injection
+   A.  This is a standard SQL Injection flaw. Enter "Smith' 'a'='a" without quotes
+   9.6 LAB: SQL Injection
+   A.  
