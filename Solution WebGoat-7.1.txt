@@ -158,3 +158,10 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
    9.1 Command Injection
    A.  Select any lesson plan and intercept the traffic. Change the parameters
        by overwriting the "HelpFile" value with ""; ls;#".
+   9.2 Numerical SQL Injection
+   A.  This is like a simple SQL injection. Intercept the traffic and replace
+       parameter with "101 or 1=1;--" without quotes.
+   9.3 Log Spoofing
+   A.  Insert carriage return and write on the new line by:
+       Waqar%0d%0aLogin Successful for user: Admin
+   9.4 
